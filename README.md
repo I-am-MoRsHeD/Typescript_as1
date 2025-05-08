@@ -20,3 +20,13 @@ For example :
 
 ### 3. Typescript increase code quality
 Typescript is a statically typed language that checks type while compiling the code.So,we get error at the very first time rather than when the code is running. Typescript also helps us to catch bugs at the compile time rather than at runtime. These are the main advantages of Typescript over JavaScript.For that type of advantages,we can easily structured our project and make it more scalable and maintainable.
+
+
+### 4. Example of Union and intersection type in Typescript
+When we use '|' this symbol to define a literal type,then it is called Union type.To use this,one of the value is matched,then it will work.For example : 
+
+        type Person = 'name' | 'age' | 'phone';
+
+When we use '&' this symbol to define a literal type,then it is called Intersection type.To use this,all the values have to be matched to go to next step,otherwise error will be shown.For example : 
+
+        type Developer = Person & { skills: string };
