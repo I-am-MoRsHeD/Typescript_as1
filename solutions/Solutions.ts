@@ -9,8 +9,8 @@ const formString = (param: string, toUpper?: boolean): string => {
     }
 };
 
-const r1 = formString('HELLO');
-// console.log(r1);
+const p1 = formString('HELLO');
+// console.log(p1);
 
 
 // problem 2
@@ -19,9 +19,9 @@ interface Book {
     rating: number;
 };
 
-const filterByRating = (books: Array<Book>) => {
+const filterByRating = (books: Array<Book>): Array<Book> => {
     if (!books) {
-        return;
+        return [];
     } else {
         return books.filter(book => book.rating > 4);
     }
@@ -33,5 +33,19 @@ const books = [
     { title: "Book C", rating: 5.0 }
 ];
 
-const r2 = filterByRating(books);
-// console.log(r2);
+const p2 = filterByRating(books);
+// console.log(p2);
+
+
+// problem 3
+const concatenateArrays = <T>(...arrays: Array<T>[]): Array<T> => {
+    return arrays.reduce((acc, curr) => acc.concat(curr), []);
+};
+
+
+// const ar1 = ['a', 'b', 'c'];
+// const ar2 = ["1"];
+// const p3: Array<string> = concatenateArrays(ar1, ar2);
+// console.log(p3);
+
+
