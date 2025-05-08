@@ -49,3 +49,35 @@ const concatenateArrays = <T>(...arrays: Array<T>[]): Array<T> => {
 // console.log(p3);
 
 
+// problem 4
+class Vehicle {
+    private make: string;
+    private year: string;
+
+    constructor(make: string, year: string) {
+        this.make = make;
+        this.year = year;
+    };
+
+    getInfo() {
+        return `Make: ${this.make}, Year: ${this.year}`
+    }
+};
+
+class Car extends Vehicle {
+    private model: string;
+
+    constructor(model: string, make: string, year: string) {
+        super(make, year);
+        this.model = model;
+    };
+
+    getModel(){
+        return `Model: ${this.model}`
+    }
+}
+
+const p4 = new Car("Mustang", "Ford", "2022");
+// console.log(p4.getInfo());
+// console.log(p4.getModel());
+
