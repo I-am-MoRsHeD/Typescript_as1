@@ -16,3 +16,7 @@ For example :
     };
 
     types SkilledDeveloper = keyof Developer;
+
+
+### 3. Typescript increase code quality
+Typescript is a statically typed language that checks type while compiling the code.So,we get error at the very first time rather than when the code is running. Typescript also helps us to catch bugs at the compile time rather than at runtime. These are the main advantages of Typescript over JavaScript.For that type of advantages,we can easily structured our project and make it more scalable and maintainable.
