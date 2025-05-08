@@ -59,7 +59,7 @@ class Vehicle {
         this.year = year;
     };
 
-    getInfo() {
+    getInfo(): string {
         return `Make: ${this.make}, Year: ${this.year}`
     }
 };
@@ -72,7 +72,7 @@ class Car extends Vehicle {
         this.model = model;
     };
 
-    getModel(){
+    getModel(): string {
         return `Model: ${this.model}`
     }
 }
@@ -81,3 +81,15 @@ const p4 = new Car("Mustang", "Ford", "2022");
 // console.log(p4.getInfo());
 // console.log(p4.getModel());
 
+
+// problem 5
+const processValue = (value: string | number): number => {
+    if (typeof value === 'string') {
+        return value.length
+    } else {
+        return value * 2;
+    };
+}
+
+const p5 = processValue(20);
+// console.log(p5);
