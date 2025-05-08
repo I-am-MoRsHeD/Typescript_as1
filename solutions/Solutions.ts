@@ -9,7 +9,6 @@ const formString = (param: string, toUpper?: boolean): string => {
 };
 
 const p1 = formString('HELLO');
-// console.log(p1);
 
 
 interface Book {
@@ -32,7 +31,7 @@ const books = [
 ];
 
 const p2 = filterByRating(books);
-// console.log(p2);
+
 
 
 const concatenateArrays = <T>(...arrays: Array<T>[]): Array<T> => {
@@ -40,10 +39,10 @@ const concatenateArrays = <T>(...arrays: Array<T>[]): Array<T> => {
 };
 
 
-// const ar1 = ['a', 'b', 'c'];
-// const ar2 = ["1"];
-// const p3: Array<string> = concatenateArrays(ar1, ar2);
-// console.log(p3);
+const ar1 = ['a', 'b', 'c'];
+const ar2 = ["1"];
+const p3: Array<string> = concatenateArrays(ar1, ar2);
+
 
 
 class Vehicle {
@@ -74,8 +73,7 @@ class Car extends Vehicle {
 }
 
 const p4 = new Car("Mustang", "Ford", "2022");
-// console.log(p4.getInfo());
-// console.log(p4.getModel());
+
 
 
 const processValue = (value: string | number): number => {
@@ -87,7 +85,7 @@ const processValue = (value: string | number): number => {
 }
 
 const p5 = processValue(20);
-// console.log(p5);
+
 
 
 interface Product {
@@ -110,7 +108,7 @@ const products = [
 ];
 
 const p6 = getMostExpensiveProduct(products);
-// console.log(p6);
+
 
 
 enum Day {
@@ -132,7 +130,7 @@ const getDayType = (day: Day): string => {
 };
 
 const p7 = getDayType(Day.Friday);
-// console.log(p7);
+
 
 
 const squareAsync = async (value: number): Promise<number> => {
@@ -148,7 +146,7 @@ const squareAsync = async (value: number): Promise<number> => {
 };
 
 squareAsync(3).then(result => {
-    // console.log(result);
+
 }).catch(err => {
-    // console.error("Error:", err.message);
+  
 });
