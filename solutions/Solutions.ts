@@ -104,7 +104,7 @@ interface Product {
 const getMostExpensiveProduct = (product: Array<Product>) => {
     if (product.length === 0) {
         return null;
-    } else{
+    } else {
         return product.reduce((acc, curr) => acc.price > curr.price ? acc : curr);
     }
 }
@@ -117,3 +117,23 @@ const products = [
 
 const p6 = getMostExpensiveProduct(products);
 // console.log(p6);
+
+
+// problem 8
+const squareAsync = async (value: number): Promise<number> => {
+    if (value < 0) {
+        throw new Error('Negative numbers are not allowed');
+    } else {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(value * value);
+            }, 1000);
+        })
+    }
+};
+
+squareAsync(3).then(result => {
+    // console.log(result);
+}).catch(err => {
+    // console.error("Error:", err.message);
+});
