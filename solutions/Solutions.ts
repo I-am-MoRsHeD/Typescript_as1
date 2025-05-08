@@ -1,4 +1,3 @@
-// problem 1
 const formString = (param: string, toUpper?: boolean): string => {
     if (toUpper === false) {
         return param.toLowerCase();
@@ -13,7 +12,6 @@ const p1 = formString('HELLO');
 // console.log(p1);
 
 
-// problem 2
 interface Book {
     title: string;
     rating: number;
@@ -37,7 +35,6 @@ const p2 = filterByRating(books);
 // console.log(p2);
 
 
-// problem 3
 const concatenateArrays = <T>(...arrays: Array<T>[]): Array<T> => {
     return arrays.reduce((acc, curr) => acc.concat(curr), []);
 };
@@ -49,7 +46,6 @@ const concatenateArrays = <T>(...arrays: Array<T>[]): Array<T> => {
 // console.log(p3);
 
 
-// problem 4
 class Vehicle {
     private make: string;
     private year: string;
@@ -82,7 +78,6 @@ const p4 = new Car("Mustang", "Ford", "2022");
 // console.log(p4.getModel());
 
 
-// problem 5
 const processValue = (value: string | number): number => {
     if (typeof value === 'string') {
         return value.length
@@ -95,7 +90,6 @@ const p5 = processValue(20);
 // console.log(p5);
 
 
-// problem 6
 interface Product {
     name: string;
     price: number;
@@ -119,7 +113,28 @@ const p6 = getMostExpensiveProduct(products);
 // console.log(p6);
 
 
-// problem 8
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+}
+
+const getDayType = (day: Day): string => {
+    if(day === Day.Saturday || day === Day.Sunday) {
+        return 'Weekend';
+    } else {
+        return 'Weekday';
+    }
+};
+
+const p7 = getDayType(Day.Friday);
+// console.log(p7);
+
+
 const squareAsync = async (value: number): Promise<number> => {
     if (value < 0) {
         throw new Error('Negative numbers are not allowed');
